@@ -5,7 +5,7 @@ $amount = $_POST["amount"];
 $nonce = $_POST["payment_method_nonce"];
 $nb = $_POST["nb_payments"];
 
-if ($nb_payments == 1) {
+if ($nb == 1) {
     $result = $gateway->transaction()->sale([
         'amount' => number_format($amount, 2),
         'paymentMethodNonce' => $nonce,
