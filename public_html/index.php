@@ -48,8 +48,7 @@
     <script>
         var form = document.querySelector('#payment-form');
         <?php
-        $result = $gateway->customer()->create();
-        $client_token = $gateway->ClientToken([customerId => $result->customer->id])->generate()
+        $client_token = $gateway->ClientToken()->generate()
         ?>
         var client_token = "<?php echo($client_token); ?>";
 

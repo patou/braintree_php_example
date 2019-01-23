@@ -28,8 +28,11 @@ if ($nb == 1) {
     }
 }
 else {
+    $resultCustomer = $gateway->customer()->create([
+        'paymentMethodNonce' => $nonce
+    ]);
     $result = $gateway->subscription()->create([
-        'paymentMethodNonce' => $nonce,
+        'paymentMethodToken' => $resultCustomer->customer->paymentMethods[0]->token,
         'planId' => 'test',
         'price' => number_format($amount / $nb, 2),
         'numberOfBillingCycles' => $nb
