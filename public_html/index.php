@@ -10,16 +10,16 @@
         <div class="checkout container">
 
             <header>
-                <h1>Hi, <br>Let's test a transaction</h1>
+                <h1>Bonjour</h1>
                 <p>
-                    Make a test payment with Braintree using PayPal or a card
+                    Payer votre billet pour le bal avec paypal ou par carte bancaire
                 </p>
             </header>
 
             <form method="post" id="payment-form" action="<?php echo $baseUrl;?>checkout.php">
                 <section>
                     <label for="amount">
-                        <span class="input-label">Amount</span>
+                        <span class="input-label">Montant</span>
                         <div class="input-wrapper amount-wrapper">
                             <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
                         </div>
@@ -31,7 +31,7 @@
                 </section>
 
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="button" type="submit"><span>Test Transaction</span></button>
+                <button class="button" type="submit"><span>Payer</span></button>
             </form>
         </div>
     </div>
@@ -44,6 +44,7 @@
         braintree.dropin.create({
           authorization: client_token,
           selector: '#bt-dropin',
+          locale: 'fr_FR',
           paypal: {
             flow: 'vault'
           }
