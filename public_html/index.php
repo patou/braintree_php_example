@@ -24,7 +24,7 @@
                             <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
                         </div>
                     </label>
-
+                    <label for="nb_payments">Payement en combien de fois ?</label>
                     <input type="range" id="nb_payments" name="nb_payments" min="1" max="3" value="1" step="1" list="tickmarks" />
 
                     <datalist id="tickmarks">
@@ -32,7 +32,6 @@
                     <option value="2" label="2x">
                     <option value="3" label="3x">
                     </datalist>
-                    <label for="nb_payments">Payement en <span id="nb_payments_display">1</span> fois</label>
 
                     <div class="bt-drop-in-wrapper">
                         <div id="bt-dropin"></div>
@@ -40,7 +39,7 @@
                 </section>
 
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="button" type="submit"><span>Payer en 3x</span></button>
+                <button class="button" type="submit"><span>Payer en <span id="nb_payments_display">1</span>x</span></button>
             </form>
         </div>
     </div>

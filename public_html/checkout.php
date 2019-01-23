@@ -7,7 +7,7 @@ $nb = $_POST["nb_payments"];
 
 if ($nb_payments == 1) {
     $result = $gateway->transaction()->sale([
-        'amount' => $amount,
+        'amount' => number_format($amount, 2),
         'paymentMethodNonce' => $nonce,
         'options' => [
             'submitForSettlement' => true
@@ -31,7 +31,7 @@ else {
     $result = $gateway->subscription()->create([
         'paymentMethodToken' => 'the_token',
         'planId' => 'test',
-        'price' => $amount / 3,
+        'price' => number_format($amount / $nb, 2),
         'numberOfBillingCycles' => $nb
     ]);
     if ($result->success || !is_null($result->subscription)) {
