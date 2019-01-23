@@ -5,3 +5,7 @@ input#nb_payments {
     width: 80px;
     display: inline-block;
 }
+
+aside pre {
+    color: white;
+}

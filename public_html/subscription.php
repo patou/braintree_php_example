@@ -54,7 +54,7 @@
     </header>
 
     <article class="content compact">
-    <?php /*<section>
+    <section>
             <h5>subscription</h5>
             <table cellpadding="0" cellspacing="0">
                 <tbody>
@@ -63,28 +63,37 @@
                         <td><?php echo($subscription->id)?></td>
                     </tr>
                     <tr>
-                        <td>type</td>
-                        <td><?php echo($subscription->type)?></td>
+                        <td>Prix</td>
+                        <td><?php echo($subscription->price)?></td>
                     </tr>
                     <tr>
-                        <td>amount</td>
-                        <td><?php echo($subscription->amount)?></td>
+                        <td>numberOfBillingCycles</td>
+                        <td><?php echo($subscription->numberOfBillingCycles)?></td>
                     </tr>
                     <tr>
-                        <td>status</td>
+                        <td>Status</td>
                         <td><?php echo($subscription->status)?></td>
                     </tr>
                     <tr>
-                        <td>created_at</td>
+                        <td>Créee le</td>
                         <td><?php echo($subscription->createdAt->format('Y-m-d H:i:s'))?></td>
                     </tr>
                     <tr>
-                        <td>updated_at</td>
+                        <td>Mise à jour le</td>
                         <td><?php echo($subscription->updatedAt->format('Y-m-d H:i:s'))?></td>
+                    </tr>
+                    <tr>
+                        <td>Première facturation</td>
+                        <td><?php echo($subscription->firstBillingDate->format('Y-m-d H:i:s'))?></td>
+                    </tr>
+                    <tr>
+                        <td>Prochaine facturation</td>
+                        <td><?php echo($subscription->nextBillingPeriodAmount->format('Y-m-d H:i:s'))?></td>
                     </tr>
                 </tbody>
             </table>
         </section>
+    <?php /*
 
         <section>
             <h5>Payment</h5>
