@@ -25,13 +25,22 @@
                         </div>
                     </label>
 
+                    <input type="range" id="nb_payments" name="nb_payments" min="1" max="3" value="1" step="1" list="tickmarks" />
+
+                    <datalist id="tickmarks">
+                    <option value="1" label="1x">
+                    <option value="2" label="2x">
+                    <option value="3" label="3x">
+                    </datalist>
+                    <label for="nb_payments">Payement en <span id="nb_payments_display">1</span> fois</label>
+
                     <div class="bt-drop-in-wrapper">
                         <div id="bt-dropin"></div>
                     </div>
                 </section>
 
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="button" type="submit"><span>Payer</span></button>
+                <button class="button" type="submit"><span>Payer en 3x</span></button>
             </form>
         </div>
     </div>

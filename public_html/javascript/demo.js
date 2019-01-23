@@ -10,4 +10,10 @@
   amount.addEventListener('blur', function () {
     amountLabel.className = '';
   }, false);
+
+  var nb_payments = document.querySelector('#nb_payments');
+  var nb_payments_display = document.querySelector('#nb_payments_display');
+  nb_payments.addEventListener('change', function (event) {
+    nb_payments_display.textContent = event.target.value
+  })
 })();
