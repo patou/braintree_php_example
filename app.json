@@ -23,6 +23,10 @@
     "BT_PRIVATE_KEY": {
       "description": "Your Braintree Private Key",
       "required": true
+    },
+    "EMAIL": {
+      "description": "Email where to send the webhook message",
+      "required": true
     }
   }
 }
