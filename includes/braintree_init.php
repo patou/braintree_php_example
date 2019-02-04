@@ -3,9 +3,6 @@ session_start();
 require_once("../vendor/autoload.php");
 
 function log_error($message) {
-    $stderr = fopen('php://stderr', 'w');
-    fwrite($stderr, "$message\n");
-    fclose($stderr);
     error_log($message);
 }
 

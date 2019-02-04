@@ -24,7 +24,7 @@
                             <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="10">
                         </div>
                     </label>
-                    <label for="nb_payments">Payement en <input type="range" id="nb_payments" name="nb_payments" min="1" max="3" value="1" step="1" list="tickmarks" />
+                    <label for="nb_payments">Payement en <input type="range" id="nb_payments" name="nb_payments" min="0" max="3" value="1" step="1" list="tickmarks" />
                     <output for="nb_payments id="nb_payments_value""></output> fois ?</label>
 
                     <datalist id="tickmarks">
