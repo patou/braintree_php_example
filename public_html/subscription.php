@@ -88,7 +88,7 @@
                     </tr>
                     <tr>
                         <td>Prochaine facturation</td>
-                        <td><?php echo($subscription->nextBillingPeriodDate->format('Y-m-d H:i:s'))?></td>
+                        <td><?php echo($subscription->nextBillingDate->format('Y-m-d H:i:s'))?></td>
                     </tr>
                 </tbody>
             </table>
