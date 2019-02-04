@@ -6,6 +6,7 @@ function log_error($message) {
     $stderr = fopen('php://stderr', 'w');
     fwrite($stderr, "$message\n");
     fclose($stderr);
+    log_error($message);
 }
 
 

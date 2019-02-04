@@ -50,7 +50,6 @@
         <?php
         $client_token = $gateway->ClientToken()->generate();
         log_error("client token=$client_token");
-        error_log( "client token=$client_token\n");
         ?>
         var client_token = "<?php echo($client_token); ?>";
 

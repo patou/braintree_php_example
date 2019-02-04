@@ -15,9 +15,8 @@ if (
   $message .= ": ";
   $message .= $webhookNotification->timestamp->format('D M j G:i:s T Y'); // "Sun Jan 1 00:00:00 UTC 2012"
 
-  error_log($message);
-  log_error("$message");
-  mail(getenv('EMAIL'), $message, json_encode($webhookNotification));
+  log_error($message);
+  log_error(json_encode($webhookNotification));
 
   header("HTTP/1.1 200 OK");
 }
