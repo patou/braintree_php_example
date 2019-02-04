@@ -49,7 +49,7 @@
         var form = document.querySelector('#payment-form');
         <?php
         $client_token = $gateway->ClientToken()->generate();
-        fwrite(STDERR, "client token=$client_token\n");
+        fwrite($stderr, "client token=$client_token\n");
         ?>
         var client_token = "<?php echo($client_token); ?>";
 
