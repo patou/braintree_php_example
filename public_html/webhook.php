@@ -22,6 +22,7 @@ if (
   header("HTTP/1.1 200 OK");
 }
 else {
+  fwrite(STDERR, "error webhook\n");
   header("HTTP/1.1 500 KO");
 }
 ?>
