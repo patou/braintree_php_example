@@ -1,1 +1,1 @@
-web: php -S 0.0.0.0:$PORT -t public_html
+web: php -S 0.0.0.0:$PORT -t public_html -c php.ini
