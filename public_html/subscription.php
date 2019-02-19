@@ -63,6 +63,10 @@
                         <td><?php echo($subscription->id)?></td>
                     </tr>
                     <tr>
+                        <td>Balance</td>
+                        <td><?php echo($subscription->balance)?></td>
+                    </tr>
+                    <tr>
                         <td>Prix</td>
                         <td><?php echo($subscription->price)?></td>
                     </tr>
